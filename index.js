@@ -10,4 +10,4 @@ app.post('/', upload.any(), function(req, res, next){
   res.json(size);
 });
 app.use('/', express.static(__dirname + '/public'));
-app.listen(3000, function(){console.log("Server is running on port 3000...")});
+app.listen(process.env.PORT || 8080, function(){console.log("Server is running...")});
